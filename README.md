@@ -1,2 +1,2 @@
-# micro-things
-My version of something
+# Playground for TDD
+* Mini version of Jest
