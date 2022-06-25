@@ -25,6 +25,10 @@ test("sub test", () => {
   expect(result).toBe(expected);
 });
 
-test("equal test", () => {
+test("대소비교", () => {
   expect(1).toBeGreaterThan(2);
+});
+
+test("객체비교", () => {
+  expect({name: 'Juliet', boyfriend: "Romeo"}).toEqual({name: 'Juliet', boyfriend: "someone else"});
 });

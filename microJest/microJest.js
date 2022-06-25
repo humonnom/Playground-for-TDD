@@ -1,3 +1,4 @@
+const { isSameObject } = require("./util");
 async function test(title, callback) {
   try {
     await callback();
@@ -16,8 +17,8 @@ function expect(actual) {
       }
     },
     toEqual(expected) {
-      if (actual !== expected) {
-        throw new Error(`${actual} is not equal to ${expected}`);
+      if (!isSameObject(expected, actual)){
+        throw new Error(`${JSON.stringify(actual)} is not equal to ${JSON.stringify(expected)}`);
       }
     },
     toBeGreaterThan(expected) {
